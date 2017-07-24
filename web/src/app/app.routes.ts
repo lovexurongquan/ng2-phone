@@ -2,8 +2,6 @@ import { RouterModule } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { LoginComponent } from './pages/account/login/login.component';
-import { SiginComponent } from './pages/account/sigin/sigin.component';
 
 
 export const appRoutes = [
@@ -15,14 +13,6 @@ export const appRoutes = [
     {
         path: 'home',
         component: HomeComponent
-    },
-    {
-        path: 'login',
-        component: LoginComponent
-    },
-    {
-        path: 'sigin',
-        component: SiginComponent
     },
     {
         path: 'account',

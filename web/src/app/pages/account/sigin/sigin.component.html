@@ -1,3 +1,46 @@
-<p>
-  sigin works!
-</p>
+<div class="content-section implementation">
+  <div class="ui-g">
+    <div class="ui-g-12 ui-md-4">
+      <h3>Basic</h3>
+      <ng-calendar [(ngModel)]="date1" tabindex="0"></ng-calendar> {{date1|date}}
+    </div>
+
+    <div class="ui-g-12 ui-md-4">
+      <h3>Spanish</h3>
+      <ng-calendar [(ngModel)]="date2" [locale]="es" dateFormat="dd/mm/yy"></ng-calendar> {{date2|date}}
+    </div>
+
+    <div class="ui-g-12 ui-md-4">
+      <h3>Icon</h3>
+      <ng-calendar [(ngModel)]="date3" [showIcon]="true"></ng-calendar> <span style="margin-left:35px">{{date3|date}}</span>
+    </div>
+
+    <div class="ui-g-12 ui-md-4">
+      <h3>Min-Max</h3>
+      <ng-calendar [(ngModel)]="date4" [minDate]="minDate" [maxDate]="maxDate" [readonlyInput]="true"></ng-calendar> {{date4|date}}
+    </div>
+
+    <div class="ui-g-12 ui-md-4">
+      <h3>Disable Days</h3>
+      <ng-calendar [(ngModel)]="date5" tabindex="0" [disabledDates]="invalidDates" [disabledDays]="[0,6]" readonlyInput="readonlyInput"></ng-calendar> {{date5|date}}
+    </div>
+
+    <div class="ui-g-12 ui-md-4">
+      <h3>Navigators</h3>
+      <ng-calendar [(ngModel)]="date6" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2030"></ng-calendar> {{date6|date}}
+    </div>
+
+    <div class="ui-g-12 ui-md-4">
+      <h3>Time</h3>
+      <ng-calendar [(ngModel)]="date7" [showTime]="true"></ng-calendar> {{date7}}
+    </div>
+
+    <div class="ui-g-12 ui-md-4">
+      <h3>Time Only</h3>
+      <ng-calendar [(ngModel)]="date8" [timeOnly]="true"></ng-calendar>
+    </div>
+  </div>
+
+  <h3>Inline {{date9|date}}</h3>
+  <ng-calendar [(ngModel)]="date9" [inline]="true"></ng-calendar>
+</div>
