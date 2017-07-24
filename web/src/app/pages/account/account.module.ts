@@ -11,13 +11,9 @@ import { LoginService } from './login/login.service';
   imports: [
     RouterModule.forChild([
       { path: '', component: LoginComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'sigin', component: SiginComponent }
     ])
   ],
   declarations: [
-    LoginComponent,
-    SiginComponent
   ],
   providers: [
     RouterModule
