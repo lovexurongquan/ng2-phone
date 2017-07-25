@@ -23,13 +23,13 @@ var fn_signin = async(ctx, next) => {
     }
 };
 var fn_add = async(ctx, next) => {
-    
+
     var now = Date.now();
 
     (async() => {
         var dog = await Pet.create({
             id: 'd-' + now,
-            name: 'Odie',
+            name: 'Gaffey',
             gender: false,
             birth: '2008-08-08',
             createdAt: now,
@@ -42,27 +42,14 @@ var fn_add = async(ctx, next) => {
 var fn_list = async(ctx, next) => {
 
     (async() => {
-        var dog = await Pet.create({
-            id: 'd-' + now,
-            name: 'Odie',
-            gender: false,
-            birth: '2008-08-08',
-            createdAt: now,
-            updatedAt: now,
-            version: 0
-        });
-        console.log('created: ' + JSON.stringify(dog));
-    })();
-    (async() => {
         var pets = await Pet.findAll({
-            where: {
-                name: 'Gaffey'
-            }
+            where: {}
         });
         console.log(`find ${pets.length} pets:`);
-        for (let p of pets) {
-            console.log(JSON.stringify(p));
-        }
+
+        console.log(JSON.stringify(pets));
+
+        ctx.response.body = JSON.stringify(pets);
     })();
 };
 
