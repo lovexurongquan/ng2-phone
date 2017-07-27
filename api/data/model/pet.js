@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const database = require('../data/database');
+const database = require('../database');
 
 var Pet = database.define('pet', {
     id: {

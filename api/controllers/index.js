@@ -1,4 +1,4 @@
-const Pet = require('../model/pet');
+const Pet = require('../data/model/pet');
 
 var fn_index = async(ctx, next) => {
 
